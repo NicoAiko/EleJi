@@ -4,7 +4,13 @@
   "main": "main.js",
   "description": "Create Subtitles you never created before!",
   "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NicoAiko/EleJi.git"
+  },
   "dependencies": {
-    "electron": "^1.4.15"
+    "electron": "^1.4.15",
+    "handlebars": "^4.0.6",
+    "i18n": "^0.8.3"
   }
 }
