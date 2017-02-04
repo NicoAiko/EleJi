@@ -6,7 +6,7 @@ window.onload = function(){
   //Setting up i18n. In this example English and German are supported. Translation files
   //are put in subfolder "locales"
   i18n.configure({
-    locales:['en', 'de'],
+    locales:['en', 'de', 'ja'],
     directory: __dirname + '/locales'
   });
 
