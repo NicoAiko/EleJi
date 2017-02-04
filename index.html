@@ -16,10 +16,19 @@
     <title>{{ i18n "Hello World!" }}</title>
   </head>
   <body>
-    <div class="ui menu">
-      <div class="header item">
-        EleJi
-      </div>
+    <div class="ui fluid compact menu">
+      <a class="item">
+        <i class="file outline icon"></i>
+        {{ i18n "New" }}
+      </a>
+      <a class="item">
+        <i class="folder open outline icon"></i>
+        {{ i18n "Open" }}
+      </a>
+      <a class="item">
+        <i class="save icon"></i>
+        {{ i18n "Save" }}
+      </a>
     </div>
     <h1>{{ i18n "Hello World!" }}</h1>
     We are using node <script>document.write(process.versions.node)</script>,
