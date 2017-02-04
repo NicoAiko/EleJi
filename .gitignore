@@ -1,0 +1,18 @@
+## vscode
+.vscode
+
+## electron
+# directories
+bower_components
+node_modules
+dist
+
+#files
+*.tgz
+*.log
+
+## npm
+npm-debug.log
+
+## build
+css/
