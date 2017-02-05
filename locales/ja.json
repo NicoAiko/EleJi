@@ -1,6 +1,12 @@
 {
-  "Hello World!": "ヘローワールド！",
   "New": "ニュー",
   "Open": "開く",
-  "Save": "保存"
+  "Save": "保存",
+  "Comment": "コメント",
+  "Style": "スタイル",
+  "Actor": "アクター",
+  "Effect": "エフェクト",
+  "Start": "始まり",
+  "End": "終了",
+  "Text": "内容"
 }

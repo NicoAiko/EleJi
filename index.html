@@ -1,38 +1,262 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- Insert this line above script imports  -->
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-    <!-- normal script imports etc  -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script src="semantic/dist/semantic.min.js"></script>  
+<head>
+	<meta charset="UTF-8">
+	<!-- Insert this line above script imports  -->
+	<script>
+		if (typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+	<!-- normal script imports etc  -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+					crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+		<script src="semantic/dist/semantic.min.js"></script>
+		<!-- Insert this line after script imports -->
+		<script>
+			if (window.module) module = window.module;
+		</script>
+		<script src="translate.js" charset="UTF-8"></script>
+		<title>EleJi</title>
+		<link rel="stylesheet" href="public/css/app.css">
+</head>
 
-    <!-- Insert this line after script imports -->
-    <script>if (window.module) module = window.module;</script>
-    <script src="translate.js" charset="UTF-8"></script>
-    <title>{{ i18n "Hello World!" }}</title>
-  </head>
-  <body>
-    <div class="ui fluid compact menu">
-      <a class="item">
-        <i class="file outline icon"></i>
-        {{ i18n "New" }}
-      </a>
-      <a class="item">
-        <i class="folder open outline icon"></i>
-        {{ i18n "Open" }}
-      </a>
-      <a class="item">
-        <i class="save icon"></i>
-        {{ i18n "Save" }}
-      </a>
-    </div>
-    <h1>{{ i18n "Hello World!" }}</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<body>
+	<div class="ui fluid compact top attached menu" id="appMenu">
+		<a class="item">
+			<i class="file outline icon"></i> {{ i18n "New" }}
+		</a>
+		<a class="item">
+			<i class="folder open outline icon"></i> {{ i18n "Open" }}
+		</a>
+		<a class="item">
+			<i class="save icon"></i> {{ i18n "Save" }}
+		</a>
+	</div>
+	<div class="ui red segment" id="appVideoSegment">
+		<p>Miep</p>
+	</div>
+	<div class="ui container" id="appSubtitleForm">
+		<div class="ui blue segment" style="height: 25vh; margin: 0;">
+			<div class="ui form">
+				<div class="three fields" style="height: 5vh;">
+					<div class="field">
+						<select id="lineStyle" class="ui mini search dropdown">
+								<option value="" disabled selected>{{ i18n "Style" }}</option>
+								<option value="1">Style 1</option>
+								<option value="2">Style 2</option>
+							</select>
+					</div>
+					<div class="field">
+						<select id="lineActor" class="ui mini search dropdown">
+								<option value="" disabled selected>{{ i18n "Actor" }}</option>
+								<option value="1">Actor 1</option>
+								<option value="2">Actor 2</option>
+							</select>
+					</div>
+					<div class="field">
+						<div class="ui mini input">
+							<input id="lineEffect" placeholder="{{ i18n 'Effect' }}" type="text">
+						</div>
+					</div>
+				</div>
+				<!-- Row 2 -->
+				<div class="four fields" style="height: 5vh;">
+					<div class="field">
+						<div class="ui mini left corner labeled input">
+							<input id="lineLayer" type="number" value="0" min="0">
+							<div class="ui left corner label">
+								<i class="sort icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui mini left corner labeled input">
+							<input id="lineTimeStart" type="text" value="0:00:00:00">
+							<div class="ui left corner label">
+								<i class="play icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui mini right corner labeled input">
+							<input id="lineTimeEnd" type="text" value="0:00:05:00">
+							<div class="ui right corner label">
+								<i class="stop icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui mini input">
+							<input id="lineTimeLength" type="text" value="0:00:05:00">
+						</div>
+					</div>
+				</div>
+				<div class="three fields" style="height: 5vh;">
+					<div class="field">
+						<div class="ui mini left corner labeled input">
+							<input id="lineMarginLeft" type="number" value="0" min="0">
+							<div class="ui left corner label">
+								<i class="arrow left icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui mini left corner labeled input">
+							<input id="lineMarginTop" type="number" value="0" min="0">
+							<div class="ui left corner label">
+								<i class="arrow up icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui mini left corner labeled input">
+							<input id="lineMarginRight" type="number" value="0" min="0">
+							<div class="ui left corner label">
+								<i class="arrow right icon"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui container" style="height: 35vh;">
+			<textarea id="lineText" style="height: 100%; width:100%; resize: none;"></textarea>
+		</div>
+	</div>
+	<div class="ui fluid container" style="height: 34vh; overflow-y: auto; margin: 0;">
+		<table class="ui green celled unstackable sortable very compact fluid small selectable table">
+			<thead>
+				<tr>
+					<th><i class="unhide icon"></i> / <i class="hide icon"></i></th>
+					<th>#</th>
+					<th>L</th>
+					<th class="two wide">{{ i18n "Start" }}</th>
+					<th class="two wide">{{ i18n "End" }}</th>
+					<th class="two wide">{{ i18n "Style" }}</th>
+					<th>{{ i18n "Actor" }}</th>
+					<th>{{ i18n "Effect" }}</th>
+					<th class="six wide">{{ i18n "Text" }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="collapsing">
+						<div class="ui fitted slider checkbox">
+							<input type="checkbox"><label></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0:00:00:00</td>
+					<td>0:00:05:00</td>
+					<td>Style 1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$('.ui.dropdown').dropdown();
+			$('.ui.checkbox').checkbox();
+		});
+	</script>
+</body>
+
 </html>

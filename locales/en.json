@@ -1,6 +1,12 @@
 {
-  "Hello World!": "Hello World!",
   "New": "New",
   "Open": "Open",
-  "Save": "Save"
+  "Save": "Save",
+  "Comment": "Comment",
+  "Style": "Style",
+  "Actor": "Actor",
+  "Effect": "Effect",
+  "Start": "Start",
+  "End": "End",
+  "Text": "Text"
 }

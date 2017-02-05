@@ -1,6 +1,12 @@
 {
-  "Hello World!": "Hallo Welt!",
-  "New": "Neu",
-  "Open": "Öffnen",
-  "Save": "Speichern"
+	"New": "Neu",
+	"Open": "Öffnen",
+	"Save": "Speichern",
+	"Comment": "Kommentar",
+	"Style": "Style",
+	"Actor": "Sprecher",
+	"Effect": "Effekt",
+  "Start": "Start",
+  "End": "Ende",
+  "Text": "Text"
 }

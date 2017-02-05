@@ -1,0 +1,27 @@
+@import '_variables';
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+#appMenu {
+  height: 5vh;
+}
+
+#appVideoSegment {
+  float: left;
+  width: 50vw;
+  height: 60vh;
+  margin: 0;
+}
+
+#appSubtitleForm {
+  float: right;
+  width: 50vw;
+  height: 60vh;
+  margin: 0;
+}

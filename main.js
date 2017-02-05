@@ -13,10 +13,12 @@ let win;
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 800,
+    width: 1100,
     height: 600,
-    minWidth: 800,
-    minHeight: 600
+    minWidth: 1100,
+    minHeight: 600,
+    useContentSize: true,
+    title: 'EleJi'
   });
 
   // and load the index.html of the app.
