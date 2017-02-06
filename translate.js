@@ -14,7 +14,7 @@ window.onload = function(){
   //Here German is selected. In a real world application the user should of course be
   //able to choose this.
   handlebars.registerHelper('i18n', function(str){
-    return i18n.__({phrase:str, locale:"de"});
+    return i18n.__({phrase:str, locale:"ja"});
   });
 
   //This replaces the entire document with the translation

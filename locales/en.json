@@ -8,5 +8,8 @@
   "Effect": "Effect",
   "Start": "Start",
   "End": "End",
-  "Text": "Text"
+  "Text": "Text",
+  "Style Editor": "Style Editor",
+  "Timing Shifter": "Timing Shifter",
+  "Settings": "Settings"
 }

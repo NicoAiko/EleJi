@@ -9,14 +9,23 @@ body {
 }
 
 #appMenu {
-  height: 5vh;
+  height: 10vh;
+  max-height: 60px;
 }
 
-#appVideoSegment {
-  float: left;
+#appAudioVideoSegment {
   width: 50vw;
-  height: 60vh;
-  margin: 0;
+  float: left;
+
+  #appVideoSegment {
+    height: 50vh;
+    margin: 0;
+  }
+
+  #appAudioSegment {
+    height: 10vh;
+    margin: 0;
+  }
 }
 
 #appSubtitleForm {
@@ -24,4 +33,32 @@ body {
   width: 50vw;
   height: 60vh;
   margin: 0;
+
+  #appSubtitleLineSettings {
+    height: 25vh;
+    max-height: 150px;
+    margin: 0;
+
+    .appSubtitleLineSettingRow {
+      height: 5vh;
+    }
+  }
+
+  #appTextArea {
+    height: 35vh;
+    margin: 0;
+    padding: 0;
+
+    #lineText {
+      font-family: 'Arial, Helvetica', sans-serif;
+      font-size: 1.4em;
+      padding: 0.5em;
+      color: black;
+
+      height: 100%;
+      width: 100%;
+      resize: none;
+    }
+  }
+
 }

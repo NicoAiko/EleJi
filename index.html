@@ -25,7 +25,7 @@
 </head>
 
 <body>
-	<div class="ui fluid compact top attached menu" id="appMenu">
+	<div class="ui fluid mini labeled icon top attached menu" id="appMenu">
 		<a class="item">
 			<i class="file outline icon"></i> {{ i18n "New" }}
 		</a>
@@ -35,14 +35,30 @@
 		<a class="item">
 			<i class="save icon"></i> {{ i18n "Save" }}
 		</a>
+		<div class="right menu">
+			<a class="item">
+				<i class="write icon"></i> {{ i18n "Style Editor" }}
+			</a>
+			<a class="item">
+				<i class="wizard icon"></i> {{ i18n "Timing Shifter" }}
+			</a>
+			<a class="item">
+				<i class="settings icon"></i> {{ i18n "Settings" }}
+			</a>
+		</div>
 	</div>
-	<div class="ui red segment" id="appVideoSegment">
-		<p>Miep</p>
+	<div class="ui component" id="appAudioVideoSegment">
+		<div class="ui red segment" id="appVideoSegment">
+			<p>Video-Segment</p>
+		</div>
+		<div class="ui yellow segment" id="appAudioSegment">
+				<p>Audio-Segment</p>
+		</div>
 	</div>
 	<div class="ui container" id="appSubtitleForm">
-		<div class="ui blue segment" style="height: 25vh; margin: 0;">
+		<div class="ui blue segment" id="appSubtitleLineSettings">
 			<div class="ui form">
-				<div class="three fields" style="height: 5vh;">
+				<div class="three fields">
 					<div class="field">
 						<select id="lineStyle" class="ui mini search dropdown">
 								<option value="" disabled selected>{{ i18n "Style" }}</option>
@@ -64,7 +80,7 @@
 					</div>
 				</div>
 				<!-- Row 2 -->
-				<div class="four fields" style="height: 5vh;">
+				<div class="four fields">
 					<div class="field">
 						<div class="ui mini left corner labeled input">
 							<input id="lineLayer" type="number" value="0" min="0">
@@ -95,7 +111,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="three fields" style="height: 5vh;">
+				<div class="three fields">
 					<div class="field">
 						<div class="ui mini left corner labeled input">
 							<input id="lineMarginLeft" type="number" value="0" min="0">
@@ -123,23 +139,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="ui container" style="height: 35vh;">
-			<textarea id="lineText" style="height: 100%; width:100%; resize: none;"></textarea>
+		<div class="ui teal segment" id="appTextArea">
+			<textarea id="lineText"></textarea>
 		</div>
 	</div>
-	<div class="ui fluid container" style="height: 34vh; overflow-y: auto; margin: 0;">
+	<div class="ui fluid container" style="height: 30vh; overflow-y: auto; margin: 0;">
 		<table class="ui green celled unstackable sortable very compact fluid small selectable table">
 			<thead>
 				<tr>
 					<th><i class="unhide icon"></i> / <i class="hide icon"></i></th>
 					<th>#</th>
 					<th>L</th>
-					<th class="two wide">{{ i18n "Start" }}</th>
-					<th class="two wide">{{ i18n "End" }}</th>
-					<th class="two wide">{{ i18n "Style" }}</th>
+					<th>{{ i18n "Start" }}</th>
+					<th>{{ i18n "End" }}</th>
+					<th>{{ i18n "Style" }}</th>
 					<th>{{ i18n "Actor" }}</th>
 					<th>{{ i18n "Effect" }}</th>
-					<th class="six wide">{{ i18n "Text" }}</th>
+					<th class="eight wide">{{ i18n "Text" }}</th>
 				</tr>
 			</thead>
 			<tbody>

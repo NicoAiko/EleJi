@@ -8,5 +8,8 @@
   "Effect": "エフェクト",
   "Start": "始まり",
   "End": "終了",
-  "Text": "内容"
+  "Text": "内容",
+  "Style Editor": "スタイル編集所",
+  "Timing Shifter": "字幕時間帯移動所",
+  "Settings": "設定"
 }
