@@ -2,6 +2,9 @@
 	"New": "Neu",
 	"Open": "Öffnen",
 	"Save": "Speichern",
+	"Style Editor": "Style Editor",
+  "Timing Shifter": "Timing-Verschieber",
+  "Settings": "Einstellungen",
 	"Comment": "Kommentar",
 	"Style": "Style",
 	"Actor": "Sprecher",
@@ -9,7 +12,14 @@
   "Start": "Start",
   "End": "Ende",
   "Text": "Text",
-  "Style Editor": "Style Editor",
-  "Timing Shifter": "Timing-Verschieber",
-  "Settings": "Einstellungen"
+  "Bold": "Fett",
+  "Italic": "Schräg",
+  "Underline": "Unterstrichen",
+  "Strikethrough": "Durchgestrichen",
+  "Font": "Font",
+  "Colors": "Farben",
+  "Primary Color": "Primäre Farbe",
+  "Secondary Color": "Sekundäre Farbe",
+  "Outline": "Kontur",
+  "Shadow": "Schatten"
 }

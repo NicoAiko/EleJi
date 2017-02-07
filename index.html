@@ -139,11 +139,30 @@
 				</div>
 			</div>
 		</div>
-		<div class="ui teal segment" id="appTextArea">
-			<textarea id="lineText"></textarea>
+		<div class="ui teal segment" id="appSubtitleText">
+			<div class="ui mini compact menu" id="appTextAreaMenu">
+				<a class="item"><i class="bold icon"></i></a>
+				<a class="item"><i class="italic icon"></i></a>
+				<a class="item"><i class="underline icon"></i></a>
+				<a class="item"><i class="strikethrough icon"></i></a>
+				<a class="item"><i class="font icon"></i></a>
+				<div class="ui dropdown item">
+					<i class="eyedropper icon"></i>
+					<i class="dropdown icon"></i>
+					<div class="menu">
+						<a class="item">{{ i18n "Primary Color" }}</a>
+						<a class="item">{{ i18n "Secondary Color" }}</a>
+						<a class="item">{{ i18n "Outline" }}</a>
+						<a class="item">{{ i18n "Shadow" }}</a>
+					</div>
+				</div>
+			</div>
+			<div class="ui fluid container" id="appTextArea">
+				<textarea id="lineText"></textarea>
+			</div>
 		</div>
 	</div>
-	<div class="ui fluid container" style="height: 30vh; overflow-y: auto; margin: 0;">
+	<div class="ui fluid container" id="appLines">
 		<table class="ui green celled unstackable sortable very compact fluid small selectable table">
 			<thead>
 				<tr>
