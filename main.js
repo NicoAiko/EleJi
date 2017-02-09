@@ -18,7 +18,8 @@ function createWindow() {
     minWidth: 1100,
     minHeight: 600,
     useContentSize: true,
-    title: 'EleJi'
+    title: 'EleJi',
+    show: false,
   });
 
   // and load the index.html of the app.

@@ -1,0 +1,53 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: fixed; }
+
+#appMenu {
+  height: 10vh;
+  max-height: 60px; }
+
+#appAudioVideoSegment {
+  width: 50vw;
+  float: left; }
+  #appAudioVideoSegment #appVideoSegment {
+    height: 50vh;
+    margin: 0; }
+  #appAudioVideoSegment #appAudioSegment {
+    height: 10vh;
+    margin: 0; }
+
+#appSubtitleForm {
+  float: right;
+  width: 50vw;
+  height: 60vh;
+  margin: 0; }
+  #appSubtitleForm #appSubtitleLineSettings {
+    height: 25vh;
+    max-height: 150px;
+    margin: 0; }
+    #appSubtitleForm #appSubtitleLineSettings .appSubtitleLineSettingRow {
+      height: 5vh; }
+  #appSubtitleForm #appSubtitleText {
+    height: 35vh;
+    margin: 0;
+    padding: 0; }
+    #appSubtitleForm #appSubtitleText #appTextAreaMenu {
+      height: 34px; }
+    #appSubtitleForm #appSubtitleText #appTextArea {
+      height: calc( 100% - 34px ); }
+      #appSubtitleForm #appSubtitleText #appTextArea #lineText {
+        font-family: 'Arial, Helvetica', sans-serif;
+        font-size: 1.4em;
+        padding: 0.5em;
+        color: black;
+        height: 100%;
+        width: 100%;
+        resize: none; }
+
+#appLines {
+  height: 30vh;
+  overflow-y: auto;
+  margin: 0; }
