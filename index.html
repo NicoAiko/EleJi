@@ -20,6 +20,7 @@
 			if (window.module) module = window.module;
 		</script>
 		<script src="translate.js" charset="UTF-8"></script>
+		<script src="appScripts/appMenu/settings.js"></script>
 		<title>EleJi</title>
 		<link rel="stylesheet" href="public/css/app.css">
 </head>
@@ -42,7 +43,7 @@
 			<a class="item">
 				<i class="wizard icon"></i> {{ i18n "Timing Shifter" }}
 			</a>
-			<a class="item">
+			<a class="item" href="javascript:openAppMenuSettings();">
 				<i class="settings icon"></i> {{ i18n "Settings" }}
 			</a>
 		</div>

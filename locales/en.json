@@ -20,5 +20,12 @@
 	"Shadow": "Shadow",
 	"Start": "Start",
 	"End": "End",
-	"Text": "Text"
+	"Text": "Text",
+	"Initialization": "Initialization",
+	"Cancel": "Cancel",
+	"General": "General",
+	"Changelog": "Changelog",
+	"German": "German",
+	"English": "English",
+	"Japanese": "Japanese"
 }

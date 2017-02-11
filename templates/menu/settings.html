@@ -1,0 +1,49 @@
+<div class="ui basic modal" id="appMenuSettings">
+  <div class="header">
+    {{ i18n "Settings" }}
+  </div>
+  <div class="content">
+    <div class="ui inverted vertical pointing menu">
+      <a class="active item">
+        {{ i18n "General" }}
+        <div class="ui hidden black left pointing label">1</div>
+      </a>
+      <a class="item">
+        {{ i18n "Changelog" }}
+        <div class="ui black label" id="appInfoVersion"></div>
+      </a>
+    </div>
+    <div class="ui inverted segment">
+      <div class="visible" id="appSettings.General">
+        <div class="ui floating labeled icon dropdown button">
+          <i class="world icon"></i>
+          <span class="text" id="appInfoLanguage"></span>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">
+              <i class="germany flag"></i>
+              {{ i18n "German" }}
+            </div>
+            <div class="item">
+              <i class="america flag"></i>
+              {{ i18n "English" }}
+            </div>
+            <div class="item">
+              <i class="japan flag"></i>
+              {{ i18n "Japanese" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui basic red cancel button">
+      <i class="remove icon"></i>
+      {{ i18n "Cancel" }}
+    </div>
+    <div class="ui basic green ok button">
+      <i class="checkmark icon"></i>
+      {{ i18n "Save" }}
+    </div>
+</div>

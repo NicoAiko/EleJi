@@ -5,12 +5,61 @@ const {
 } = require('electron');
 const path = require('path');
 const url = require('url');
+const storage = require('electron-json-storage');
+const _ = require('lodash');
+const appInfo = require('./appInfo');
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
+let initWin;
+
+function initializationWindow() {
+  initWin = new BrowserWindow({
+    width: 300,
+    height: 300,
+    resizable: false,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    frame: false,
+    titleBarStyle: 'none',
+    darkTheme: true
+  });
+  // and load the index.html of the app.
+  initWin.loadURL(url.format({
+    pathname: path.join(__dirname, 'initialization.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
+
+  initWin.on('show', () => {
+    createWindow();
+  });
+
+  storage.get('usersettings', function(error, data) {
+    if(error) throw error;
+
+    if(typeof _.get(data, 'language') === 'undefined') {
+      storage.set('usersettings', { language: app.getLocale() }, function(error) {
+        if(error) throw error;
+
+        appInfo.Language = app.getLocale();
+      });
+    } else {
+      appInfo.Language = _.get(data, 'language');
+    }
+  });
+
+  appInfo.Version = app.getVersion();
+
+  initWin.on('close', () => {
+    initWin = null;
+  });
+}
 
 function createWindow() {
+
   // Create the browser window.
   win = new BrowserWindow({
     width: 1100,
@@ -32,6 +81,10 @@ function createWindow() {
   // Open the DevTools.
   // win.webContents.openDevTools()
 
+  win.on('ready-to-show', () => { initWin.close(); });
+
+  win.webContents.on('did-finish-load', () => { win.show(); });
+
   // Emitted when the window is closed.
   win.on('closed', () => {
     // Dereference the window object, usually you would store windows
@@ -44,7 +97,9 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+
+// app.on('ready', createWindow);
+app.on('ready', initializationWindow);
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
@@ -68,5 +123,5 @@ app.on('activate', () => {
 
 ipcMain.on("translation-complete", (event, args) => {
   // This will show the sender's BrowserWindow
-  BrowserWindow.fromWebContents(event.sender.webContents).show();
+  BrowserWindow.fromWebContents(event.sender.webContents);
 });

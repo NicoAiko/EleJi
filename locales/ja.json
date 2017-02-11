@@ -21,5 +21,12 @@
 	"Primary Color": "プライマリーカラー",
 	"Secondary Color": "セカンダリーカラー",
 	"Outline": "アウトライン",
-	"Shadow": "シャドー"
+	"Shadow": "シャドー",
+	"Initialization": "準備中・・・",
+	"Cancel": "キャンセル",
+	"General": "一般",
+	"Changelog": "更新情報",
+	"German": "ドイツ語",
+	"English": "英語",
+	"Japanese": "日本語"
 }
