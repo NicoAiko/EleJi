@@ -11,6 +11,7 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="public/js/bootstrap.js"></script>
 		<script src="translate.js"></script>
+		<script src="appscripts/appMenu/settings.js"></script>
 </head>
 
 <body>
@@ -52,17 +53,17 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="ui component" id="appAudioVideoSegment">
-		<div class="ui red segment" id="appVideoSegment">
+	<div class="row" id="appAudioVideoSegment">
+		<div class="col-md-6 col-lg-6" id="appVideoSegment">
 			<p>Video-Segment</p>
 		</div>
-		<div class="ui yellow segment" id="appAudioSegment">
+		<div class="col-md-6 col-lg-6" id="appAudioSegment">
 				<p>Audio-Segment</p>
 		</div>
 	</div>
-	<div class="ui container" id="appSubtitleForm">
-		<div class="ui blue segment" id="appSubtitleLineSettings">
-			<div class="ui form">
+	<div class="row" id="appSubtitleForm">
+		<div class="col-md-6 col-lg-6" id="appSubtitleLineSettings">
+			<div class="form-group">
 				<div class="three fields">
 					<div class="field">
 						<select id="lineStyle" class="ui mini search dropdown">
@@ -144,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="ui teal segment" id="appSubtitleText">
+		<div class="col-md-6 col-lg-6" id="appSubtitleText">
 			<div class="ui mini compact menu" id="appTextAreaMenu">
 				<a class="item"><i class="bold icon"></i></a>
 				<a class="item"><i class="italic icon"></i></a>
@@ -167,8 +168,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui fluid container" id="appLines">
-		<table class="ui green celled unstackable sortable very compact fluid small selectable table">
+	<div class="row" id="appLines">
+		<table class="table table-default">
 			<thead>
 				<tr>
 					<th><i class="unhide icon"></i> / <i class="hide icon"></i></th>

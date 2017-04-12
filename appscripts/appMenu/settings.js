@@ -28,10 +28,10 @@ function openAppMenuSettings() {
 
     $('#appMenuSettings')
       .modal({
-        closable: false,
-        onDeny: function() { closeAppMenuSettings('cancel'); return false; },
-        onApprove: function() { closeAppMenuSettings('save'); return false; },
-        onHidden: function() { closeAppMenuSettings('remove'); return; }
+        backdrop: 'static',
+        //onDeny: function() { closeAppMenuSettings('cancel'); return false; },
+        //onApprove: function() { closeAppMenuSettings('save'); return false; },
+        //onHidden: function() { closeAppMenuSettings('remove'); return; }
       })
       .modal('show');
   });
