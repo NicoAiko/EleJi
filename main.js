@@ -8,6 +8,7 @@ const url = require('url');
 const storage = require('electron-json-storage');
 const _ = require('lodash');
 const appInfo = require('./appInfo');
+const $ = require('jquery');
 
 
 // Keep a global reference of the window object, if you don't, the window will
