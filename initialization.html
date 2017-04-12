@@ -3,33 +3,15 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- Insert this line above script imports  -->
-	<script>
-		if (typeof module === 'object') {
-			window.module = module;
-			module = undefined;
-		}
-	</script>
-	<!-- normal script imports etc  -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-					crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-		<script src="semantic/dist/semantic.min.js"></script>
-		<!-- Insert this line after script imports -->
-		<script>
-			if (window.module) module = window.module;
-		</script>
-		<script src="translate.js" charset="UTF-8"></script>
 		<title>EleJi</title>
+		<link rel="stylesheet" href="public/css/bootstrap.min.css">
 		<link rel="stylesheet" href="public/css/initialization.css">
+		<script src="translate.js"></script>
 </head>
 
 <body>
-  <div class="ui segment">
-		<div class="ui active dimmer">
-			<div class="ui text loader">{{ i18n "Initialization"}}</div>
-		</div>
-    <p></p>
+  <div class="container">
+			<h3><span class="label label-default">{{ i18n "Initialization"}}</span></h3>
   </div>
 </body>
 

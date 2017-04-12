@@ -3,51 +3,55 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- Insert this line above script imports  -->
-	<script>
-		if (typeof module === 'object') {
-			window.module = module;
-			module = undefined;
-		}
-	</script>
-	<!-- normal script imports etc  -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-					crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-		<script src="semantic/dist/semantic.min.js"></script>
-		<!-- Insert this line after script imports -->
-		<script>
-			if (window.module) module = window.module;
-		</script>
-		<script src="translate.js" charset="UTF-8"></script>
-		<script src="appScripts/appMenu/settings.js"></script>
+		<link href="public/css/bootstrap.min.css" rel="stylesheet">
 		<title>EleJi</title>
 		<link rel="stylesheet" href="public/css/app.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="public/js/bootstrap.js"></script>
+		<script src="translate.js"></script>
 </head>
 
 <body>
-	<div class="ui fluid mini labeled icon top attached menu" id="appMenu">
-		<a class="item">
-			<i class="file outline icon"></i> {{ i18n "New" }}
-		</a>
-		<a class="item">
-			<i class="folder open outline icon"></i> {{ i18n "Open" }}
-		</a>
-		<a class="item">
-			<i class="save icon"></i> {{ i18n "Save" }}
-		</a>
-		<div class="right menu">
-			<a class="item">
-				<i class="write icon"></i> {{ i18n "Style Editor" }}
-			</a>
-			<a class="item">
-				<i class="wizard icon"></i> {{ i18n "Timing Shifter" }}
-			</a>
-			<a class="item" href="javascript:openAppMenuSettings();">
-				<i class="settings icon"></i> {{ i18n "Settings" }}
-			</a>
+	<nav class="navbar navbar-default" id="appMenu">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-file" aria-hidden="true"></span> {{ i18n "New" }}
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>  {{ i18n "Open" }}
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> {{ i18n "Save" }}
+					</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> {{ i18n "Style Editor" }}
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> {{ i18n "Timing Shifter" }}
+					</a>
+				</li>
+				<li>
+					<a href="javascript:openAppMenuSettings();">
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> {{ i18n "Settings" }}
+					</a>
+				</li>
+			</ul>
 		</div>
-	</div>
+	</nav>
 	<div class="ui component" id="appAudioVideoSegment">
 		<div class="ui red segment" id="appVideoSegment">
 			<p>Video-Segment</p>
@@ -287,12 +291,6 @@
 			</tbody>
 		</table>
 	</div>
-	<script>
-		$(document).ready(function () {
-			$('.ui.dropdown').dropdown();
-			$('.ui.checkbox').checkbox();
-		});
-	</script>
 </body>
 
 </html>
