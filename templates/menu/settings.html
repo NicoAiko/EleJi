@@ -2,52 +2,67 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">{{ i18n "Settings" }}
+        <div class="modal-title">{{ i18n "Settings" }}</div>
       </div>
       <div class="modal-body">
-        <div class="ui inverted vertical pointing menu">
-          <a class="active item">
-            {{ i18n "General" }}
-            <div class="ui hidden black left pointing label">1</div>
-          </a>
-          <a class="item">
-            {{ i18n "Changelog" }}
-            <div class="ui black label" id="appInfoVersion"></div>
-          </a>
-        </div>
-        <div class="ui inverted segment">
-          <div class="visible" id="appSettings.General">
-            <div class="ui floating labeled icon dropdown button">
-              <i class="world icon"></i>
-              <span class="text" id="appInfoLanguage"></span>
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="item">
-                  <i class="germany flag"></i>
-                  {{ i18n "German" }}
-                </div>
-                <div class="item">
-                  <i class="america flag"></i>
-                  {{ i18n "English" }}
-                </div>
-                <div class="item">
-                  <i class="japan flag"></i>
-                  {{ i18n "Japanese" }}
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation" class="active">
+                <a href="#">{{ i18n "General" }}<span class="badge">1</span></a>
+              </li>
+              <li role="presentation">
+                <a href="#">
+                  {{ i18n "Changelog" }}
+                  <span class="badge" id="appInfoVersion"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="show" id="appSettings.General">
+              <div class="btn-group" role="group" aria-label="...">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="flag-icon flag-icon-de"></span>
+                    Sprache
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                      <a href="#">
+                        <span class="flag-icon flag-icon-de"></span>
+                        {{ i18n "German" }}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="flag-icon flag-icon-gb"></span>
+                        {{ i18n "English" }}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="flag-icon flag-icon-jp"></span>
+                        {{ i18n "Japanese" }}
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="actions">
-        <div class="ui basic red cancel button">
-          <i class="remove icon"></i>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
           {{ i18n "Cancel" }}
-        </div>
-        <div class="ui basic green ok button">
-          <i class="checkmark icon"></i>
+        </button>
+        <button type="button" class="btn btn-success">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           {{ i18n "Save" }}
-        </div>
+        </button>
       </div>
     </div>
   </div>
