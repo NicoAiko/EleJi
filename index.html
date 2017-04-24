@@ -64,68 +64,69 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-lg-6">
-			<div class="form-group">
-				<div class="col-md-4 col-lg-4">
-					<select id="lineStyle" class="form-control input-sm">
-						<option value="" disabled selected>{{ i18n "Style" }}</option>
-						<option value="1">Style 1</option>
-						<option value="2">Style 2</option>
-					</select>
-				</div>
-				<div class="col-md-4 col-lg-4">
-					<select id="lineActor" class="form-control input-sm">
-						<option value="" disabled selected>{{ i18n "Actor" }}</option>
-						<option value="1">Actor 1</option>
-						<option value="2">Actor 2</option>
-					</select>
-				</div>
-				<div class="col-md-4 col-lg-4">
-					<input id="lineEffect" class="form-control input-sm" placeholder="{{ i18n 'Effect' }}" type="text">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-4 col-lg-4">
-					<div class="input-group">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></div>
-						<input id="lineStart" type="text" value="0:00:00:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
+			<form class="form-inline">
+				<div class="form-group">
+					<div class="col-md-4 col-lg-4">
+						<label class="sr-only" for="lineStyle">{{ i18n "Style" }}:</label>
+						<select id="lineStyle" class="form-control input-sm">
+							<option value="" disabled>{{ i18n "Style" }}</option>
+							<option value="1" selected>Style 1</option>
+							<option value="2">Style 2</option>
+						</select>
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<label class="sr-only" for="lineActor">{{ i18n "Actor" }}:</label>
+						<input id="lineActor" class="form-control input-sm" placeholder="{{ i18n 'Actor' }}" value="" type="text" autocomplete="true" />
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<label class="sr-only" for="lineActor">{{ i18n "Effect" }}:</label>
+						<input id="lineEffect" class="form-control input-sm" placeholder="{{ i18n 'Effect' }}" value="" type="text" autocomplete="true">
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
-					<div class="input-group">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></div>
-						<input id="lineStop" type="text" value="0:00:05:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
+				<div class="form-group">
+					<div class="col-md-4 col-lg-4">
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></div>
+							<input id="lineStart" type="text" value="0:00:00:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></div>
+							<input id="lineStop" type="text" value="0:00:05:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<input id="lineLength" type="text" value="0:00:05:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-4">
-					<input id="lineLength" type="text" value="0:00:05:00" pattern="[0-9]{1}:[0-9]{2}:[0-9]{2}:[0-9]{2}" class="form-control input-sm" required size="10" maxlength="10">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-3 col-lg-3">
-					<div class="input-group">
-						<div class="input-group-addon">L</div>
-						<input id="lineLayer" type="number" class="form-control input-sm" value="0" min="0">
+				<div class="form-group">
+					<div class="col-md-3 col-lg-3">
+						<div class="input-group">
+							<div class="input-group-addon">L</div>
+							<input id="lineLayer" type="number" class="form-control input-sm" value="0" min="0">
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3">
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+							<input id="lineMarginLeft" class="form-control input-sm" type="number" value="0" min="0">
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3">
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span></div>
+							<input id="lineMarginTop" class="form-control input-sm" type="number" value="0" min="0">
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3">
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></div>
+							<input id="lineMarginRight" class="form-control input-sm" type="number" value="0" min="0">
+						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-3">
-					<div class="input-group">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
-						<input id="lineMarginLeft" class="form-control input-sm" type="number" value="0" min="0">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-3">
-					<div class="input-group">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span></div>
-						<input id="lineMarginTop" class="form-control input-sm" type="number" value="0" min="0">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-3">
-					<div class="input-group">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></div>
-						<input id="lineMarginRight" class="form-control input-sm" type="number" value="0" min="0">
-					</div>
-				</div>
-			</div>
+			</form>
 		</div>
 		<div class="col-md-6 col-lg-6">
 			<div class="btn-toolbar" role="toolbar">
