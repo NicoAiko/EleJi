@@ -1,5 +1,8 @@
 <template>
   <div class="hello">
+    <div class="alert alert-primary" role="alert">
+      Test
+    </div>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>

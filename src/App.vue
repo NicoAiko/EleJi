@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <TitleBar/>
     <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import TitleBar from './components/MainFrameElements/TitleBar';
+
 export default {
   name: 'App',
+  components: {
+    TitleBar,
+  },
 };
 </script>
 

@@ -7,7 +7,14 @@ function createWindow() {
     height: 563,
     useContentSize: true,
     width: 1000,
+    minHeight: 320,
+    minWidth: 320,
     title: 'EleJi',
+    titleBarStyle: 'hidden',
+    show: false,
+    webPreferences: {
+      devTools: true,
+    },
   });
 
   mainWindow.loadURL('http://localhost:8080');
@@ -17,11 +24,15 @@ function createWindow() {
   });
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+  createWindow();
+  mainWindow.show();
+});
 
 app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
+    mainWindow.show();
   }
 });
 
