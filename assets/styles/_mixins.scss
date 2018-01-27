@@ -1,3 +1,0 @@
-@mixin calculateHeight($fullHeight, $substractionHeight) {
-  height: unquote("calc( #{$fullHeight} - #{$substractionHeight} )");
-}
