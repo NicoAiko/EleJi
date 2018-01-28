@@ -1,4 +1,4 @@
-# eleji
+# EleJi
 
 > Subtitle Program
 

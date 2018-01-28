@@ -18,13 +18,13 @@ function createWindow() {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 800,
     useContentSize: true,
+    height: 800,
     width: 1000,
     minHeight: 800,
     minWidth: 1000,
+    backgroundColor: '#444444',
     title: 'EleJi',
-    titleBarStyle: 'hidden',
     show: false,
     webPreferences: {
       devTools: true,

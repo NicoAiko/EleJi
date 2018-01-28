@@ -1,11 +1,20 @@
 {
   "de": {
+    "window": {
+      "title": "EleJi - Deutsch"
+    },
     "test": "Test-App"
   },
   "en": {
+    "window": {
+      "title": "EleJi - English"
+    },
     "test": "Test App"
   },
   "ja": {
+    "window": {
+      "title": "EleJi - 日本語"
+    },
     "test": "テストアプリ"
   }
 }
