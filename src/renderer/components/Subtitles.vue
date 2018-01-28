@@ -1,70 +1,145 @@
 <template>
-  <table class="table table-sm table-dark table-hover table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>First</th>
-        <th>Last</th>
-        <th>Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>tdornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>tdornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>tdornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>tdornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="scrollable table">
+    <table class="ui selectable celled compact inverted single line table">
+      <thead>
+        <tr>
+          <th>{{ $t('subtitles.table.headers.line') }}</th>
+          <th>{{ $t('subtitles.table.headers.start') }}</th>
+          <th>{{ $t('subtitles.table.headers.end') }}</th>
+          <th>{{ $t('subtitles.table.headers.author') }}</th>
+          <th>{{ $t('subtitles.table.headers.effect') }}</th>
+          <th class="eight wide">{{ $t('subtitles.table.headers.text') }}</th>
+        </tr>
+      </thead>
+      <tbody id="subtitlesBody">
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>tdornton</td>
+          <td>@fat</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
+<script>
+// import $ from 'jquery';
+
+export default {
+  // mounted() {
+  //   $('thead', this.$el).sticky({
+  //     context: '#subtitlesBody',
+  //   });
+  // },
+  // updated() {
+  //   $('thead', this.$el).sticky({
+  //     context: '#subtitlesBody',
+  //   });
+  // },
+};
+</script>
+
+
 <style scoped>
-table {
-  margin-bottom: 0;
-  height: 200px;
-  display: -moz-groupbox;
-}
-tbody {
+.scrollable.table {
+  position: fixed;
+  bottom: 0;
+  height: 250px;
+  width: 100%;
   overflow-y: scroll;
-  position: absolute;
-  width: 100%;
-  height: 165px;
 }
-tr {
-  width: 100%;
-  display: inline-table;
-  table-layout: fixed;
-  height: 20px;
+
+tr td, tr th {
+  cursor: default !important;
 }
 </style>
 

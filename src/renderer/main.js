@@ -2,8 +2,8 @@ import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import axios from 'axios';
 
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'semantic-ui/dist/semantic.min.css';
+import 'semantic-ui/dist/semantic.min.js';
 
 import App from './App';
 import router from './router';

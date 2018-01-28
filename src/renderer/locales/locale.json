@@ -3,18 +3,60 @@
     "window": {
       "title": "EleJi - Deutsch"
     },
-    "test": "Test-App"
+    "textBox": {
+      "label": "Text"
+    },
+    "subtitles": {
+      "table": {
+        "headers": {
+          "line": "#",
+          "start": "Startzeit",
+          "end": "Endzeit",
+          "author": "Autor",
+          "effect": "Effekt",
+          "text": "Text"
+        }
+      }
+    }
   },
   "en": {
     "window": {
       "title": "EleJi - English"
     },
-    "test": "Test App"
+    "textBox": {
+      "label": "Text"
+    },
+    "subtitles": {
+      "table": {
+        "headers": {
+          "line": "#",
+          "start": "Start Time",
+          "end": "End Time",
+          "author": "Author",
+          "effect": "Effect",
+          "text": "Text"
+        }
+      }
+    }
   },
   "ja": {
     "window": {
       "title": "EleJi - 日本語"
     },
-    "test": "テストアプリ"
+    "textBox": {
+      "label": "テキスト"
+    },
+    "subtitles": {
+      "table": {
+        "headers": {
+          "line": "#",
+          "start": "スタートタイム",
+          "end": "エンドタイム",
+          "author": "作者",
+          "effect": "エフェクト",
+          "text": "テキスト"
+        }
+      }
+    }
   }
 }
